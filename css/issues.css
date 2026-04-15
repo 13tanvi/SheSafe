@@ -1,0 +1,161 @@
+/* ========================================
+   SheSafe – Issues Page Styles
+   ======================================== */
+
+/* ---- Hero ---- */
+.issues-hero {
+  padding: 56px 0 32px;
+}
+.issues-hero h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(34px, 5.5vw, 58px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin-bottom: 18px;
+  color: var(--dark);
+}
+.text-pink   { color: var(--pink); }
+.text-purple { color: var(--purple); }
+.issues-hero p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* ---- Issues Grid ---- */
+.issues-grid-section { margin-bottom: 40px; }
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.issue-card {
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+}
+.issue-card.featured {
+  border: 2px solid var(--pink);
+}
+.issue-card.featured::before {
+  content: 'URGENT';
+  position: absolute;
+  top: 14px; right: 16px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--pink);
+  background: var(--pink-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.ic-top { margin-bottom: 16px; }
+.issue-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+.issue-card p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+.ic-link {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: letter-spacing var(--transition);
+  display: inline-block;
+}
+.ic-link:hover { letter-spacing: 0.3px; }
+.pink-link   { color: var(--pink); }
+.purple-link { color: var(--purple); }
+
+/* Media tiles (emoji placeholder for images) */
+.ic-media {
+  width: 100%;
+  height: 130px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #e8e0f5, #d4c8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+.ic-media-green {
+  background: linear-gradient(135deg, #c8e8d8, #a8d8c0);
+}
+
+/* ---- Legal Banner ---- */
+.legal-banner {
+  margin-bottom: 60px;
+}
+.legal-inner {
+  background: linear-gradient(130deg, var(--pink) 0%, #8b1a4a 55%, #4a0f2e 100%);
+  border-radius: 28px;
+  padding: 56px 56px 56px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.legal-inner::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.legal-content { max-width: 480px; }
+.legal-content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 800;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+.legal-content p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+.legal-deco {
+  font-size: 100px;
+  opacity: 0.15;
+  flex-shrink: 0;
+  filter: grayscale(1) brightness(10);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 900px) {
+  .issues-grid { grid-template-columns: repeat(2, 1fr); }
+  .legal-inner { padding: 40px 36px; }
+  .legal-deco  { display: none; }
+}
+
+@media (max-width: 680px) {
+  .issues-hero { padding: 36px 0 24px; }
+  .issues-grid { grid-template-columns: 1fr; gap: 14px; }
+  .legal-inner { padding: 32px 24px; border-radius: 20px; }
+  .legal-content h2 { font-size: 24px; }
+  .issue-card.featured::before { display: none; }
+}

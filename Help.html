@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheSafe – Help & Helplines</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/help.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">SheSafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Issues.html">Issues</a></li>
+      <li><a href="Help.html" class="active">Help</a></li>
+      <li><a href="Report.html">Report</a></li>
+    </ul>
+    <div class="nav-avatar">👤</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="Issues.html">Issues</a>
+    <a href="Help.html" class="active">Help</a>
+    <a href="Report.html">Report</a>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="page-wrapper">
+
+    <!-- Header -->
+    <section class="help-hero">
+      <div class="container">
+        <h1 class="fade-up">Immediate Support</h1>
+        <p class="fade-up delay-1">Help is just one tap away. Connect with verified emergency services and support networks instantly.</p>
+      </div>
+    </section>
+
+    <!-- Helpline Cards -->
+    <section class="help-cards-section container">
+      <div class="help-grid">
+
+        <!-- Emergency Services -->
+        <div class="help-card card fade-up delay-1">
+          <div class="icon-badge pink">✳</div>
+          <h3>Emergency Services</h3>
+          <p class="help-subtitle">Police, Fire, and Ambulance</p>
+          <div class="help-number">112</div>
+          <button class="btn btn-pink" onclick="dialNumber('112','Emergency Services')">
+            📞 Call Now
+          </button>
+        </div>
+
+        <!-- Women Helpline -->
+        <div class="help-card card purple-card fade-up delay-2">
+          <div class="icon-badge purple">🎧</div>
+          <h3>Women Helpline</h3>
+          <p class="help-subtitle">Round the clock assistance for women in distress.</p>
+          <div class="help-number purple-num">1091</div>
+          <button class="btn btn-purple" onclick="dialNumber('1091','Women Helpline')">
+            📞 Dial 1091
+          </button>
+        </div>
+
+        <!-- Domestic Violence + Info Banner (wide row) -->
+        <div class="help-card card pink-card fade-up delay-1">
+          <div class="icon-badge red">🏠</div>
+          <h3>Domestic Violence</h3>
+          <p class="help-subtitle">Confidential support and legal counseling.</p>
+          <div class="help-number red-num">181</div>
+          <button class="btn btn-red" onclick="dialNumber('181','Domestic Violence Helpline')">
+            📞 Dial 181
+          </button>
+        </div>
+
+        <!-- Info card -->
+        <div class="help-card help-info-card card fade-up delay-2">
+          <div class="info-icon">🤝</div>
+          <h3>Staying Safe Together</h3>
+          <p>All calls to these numbers are toll-free and available 24/7 across the country. Your location will be shared with emergency responders automatically when you use the SheSafe SOS trigger.</p>
+          <div class="info-chips">
+            <span class="chip">📍 Auto Location Share</span>
+            <span class="chip">🔒 Fully Confidential</span>
+            <span class="chip">🆓 Toll Free</span>
+            <span class="chip">⏰ 24/7 Available</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Safety Tips Strip -->
+    <section class="tips-strip container" data-animate>
+      <h2 class="tips-title">Quick Safety Tips</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-icon">📱</span>
+          <p>Keep SheSafe open in the background so SOS triggers instantly.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">👥</span>
+          <p>Share your live location with a trusted contact when traveling alone.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🔆</span>
+          <p>Prefer well-lit routes. Check community safety heatmaps before leaving.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">📷</span>
+          <p>Document evidence safely using the in-app secure photo vault.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== BOTTOM NAV (mobile) ===== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bnav-item">
+      <span class="bnav-icon">🏠</span>HOME
+    </a>
+    <a href="Issues.html" class="bnav-item">
+      <span class="bnav-icon">⚖️</span>ISSUES
+    </a>
+    <button class="bnav-sos" onclick="triggerSOS()">
+      <span class="bnav-icon">✳</span>SOS
+    </button>
+    <a href="Help.html" class="bnav-item active">
+      <span class="bnav-icon">❓</span>HELP
+    </a>
+    <a href="Report.html" class="bnav-item">
+      <span class="bnav-icon">📢</span>REPORT
+    </a>
+  </nav>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon" id="modal-icon">📞</div>
+      <h2 id="modal-title">Connecting…</h2>
+      <p id="modal-msg">Dialing now.</p>
+      <button class="modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

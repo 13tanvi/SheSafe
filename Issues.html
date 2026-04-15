@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheSafe – Know Your Rights</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/issues.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">SheSafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Issues.html" class="active">Issues</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="Report.html">Report</a></li>
+    </ul>
+    <div class="nav-avatar">👤</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="Issues.html" class="active">Issues</a>
+    <a href="Help.html">Help</a>
+    <a href="Report.html">Report</a>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="page-wrapper">
+
+    <!-- Header -->
+    <section class="issues-hero">
+      <div class="container">
+        <h1 class="fade-up">
+          Know Your <span class="text-pink">Rights.</span><br>
+          Seek Your <span class="text-purple">Justice.</span>
+        </h1>
+        <p class="fade-up delay-1">Comprehensive resources and legal support for issues affecting women's safety and well-being. You are not alone — expert help is a tap away.</p>
+      </div>
+    </section>
+
+    <!-- Issue Cards Grid -->
+    <section class="issues-grid-section container">
+      <div class="issues-grid">
+
+        <div class="issue-card card fade-up delay-1" data-animate>
+          <div class="ic-top">
+            <div class="icon-badge pink">🧪</div>
+          </div>
+          <h3>Acid Attack</h3>
+          <p>Immediate medical protocols, legal framework, and rehabilitation support networks for survivors.</p>
+          <a href="#" class="ic-link pink-link">Learn More →</a>
+        </div>
+
+        <div class="issue-card card featured fade-up delay-2" data-animate>
+          <div class="ic-top">
+            <div class="icon-badge red">🛡️</div>
+          </div>
+          <h3>Sexual Assault</h3>
+          <p>Confidential reporting guides, medical assistance locations, and trauma-informed legal counseling.</p>
+          <a href="Help.html" class="ic-link pink-link">Emergency Help →</a>
+        </div>
+
+        <div class="issue-card card fade-up delay-3" data-animate>
+          <div class="ic-media">💼</div>
+          <h3>Workplace Harassment</h3>
+          <p>Understanding PoSH guidelines, documenting evidence, and navigating corporate accountability structures.</p>
+          <a href="#" class="ic-link purple-link">View Guidelines →</a>
+        </div>
+
+        <div class="issue-card card fade-up delay-1" data-animate>
+          <div class="ic-top">
+            <div class="icon-badge pink">🏠</div>
+          </div>
+          <h3>Domestic Violence</h3>
+          <p>Safe house directories, protection orders, and discreet communication tools for home safety.</p>
+          <a href="Help.html" class="ic-link pink-link">Get Support →</a>
+        </div>
+
+        <div class="issue-card card fade-up delay-2" data-animate>
+          <div class="ic-top">
+            <div class="icon-badge purple">🔒</div>
+          </div>
+          <h3>Cyber Crime</h3>
+          <p>Combatting stalking, doxxing, and non-consensual image sharing with digital forensic tools.</p>
+          <a href="Report.html" class="ic-link purple-link">Report Online →</a>
+        </div>
+
+        <div class="issue-card card fade-up delay-3" data-animate>
+          <div class="ic-media ic-media-green">🧘</div>
+          <h3>Mental Stress</h3>
+          <p>Therapeutic resources, stress management workshops, and 24/7 counseling for psychological well-being.</p>
+          <a href="#" class="ic-link pink-link">Book Session →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Legal Banner -->
+    <section class="legal-banner container" data-animate>
+      <div class="legal-inner">
+        <div class="legal-content fade-up">
+          <span class="section-label" style="background:rgba(255,255,255,0.2);color:white;">Legal Spotlight</span>
+          <h2>Empower Yourself with Zero-Cost Consultation</h2>
+          <p>Speak with our certified legal experts who specialize in women's rights and family law. Completely anonymous and free.</p>
+          <a href="#" class="btn btn-white">Talk to a Lawyer</a>
+        </div>
+        <div class="legal-deco" aria-hidden="true">⚖️</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== BOTTOM NAV (mobile) ===== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bnav-item">
+      <span class="bnav-icon">🏠</span>HOME
+    </a>
+    <a href="Issues.html" class="bnav-item active">
+      <span class="bnav-icon">⚖️</span>ISSUES
+    </a>
+    <button class="bnav-sos" onclick="triggerSOS()">
+      <span class="bnav-icon">✳</span>SOS
+    </button>
+    <a href="Help.html" class="bnav-item">
+      <span class="bnav-icon">❓</span>HELP
+    </a>
+    <a href="Report.html" class="bnav-item">
+      <span class="bnav-icon">📢</span>REPORT
+    </a>
+  </nav>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon" id="modal-icon">🚨</div>
+      <h2 id="modal-title">SOS Activated</h2>
+      <p id="modal-msg">Your location is being shared with emergency responders.</p>
+      <button class="modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

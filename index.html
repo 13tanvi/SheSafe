@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
   <title>Delivery Dashboard</title>
@@ -95,3 +96,153 @@
 
 </body>
 </html>
+=======
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheSafe – Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">SheSafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="Issues.html">Issues</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="Report.html">Report</a></li>
+    </ul>
+    <div class="nav-avatar">👤</div>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="Issues.html">Issues</a>
+    <a href="Help.html">Help</a>
+    <a href="Report.html">Report</a>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="page-wrapper">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text fade-up">
+          <h1>SheSafe –<br>Your Safety<br><span>Matters.</span></h1>
+          <p>Empowering women through community surveillance, real-time reporting, and an unwavering commitment to personal trust and security.</p>
+          <div class="hero-btns">
+            <a href="Report.html" class="btn btn-pink">Get Started →</a>
+            <a href="Issues.html" class="btn btn-ghost-purple">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-visual fade-up delay-2">
+          <div class="shield-wrap">
+            <div class="shield-glow"></div>
+            <div class="shield-icon">🛡️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOS Band -->
+    <section class="sos-band container">
+      <div class="sos-card card">
+        <div class="sos-text">
+          <h3>Emergency Assistance</h3>
+          <p>Tap and hold for immediate emergency support — your location will be shared automatically.</p>
+        </div>
+        <button class="sos-circle" onclick="triggerSOS()" aria-label="SOS Emergency">
+          <span class="sos-star">✳</span>
+          <span class="sos-label">SOS</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="features-section container" data-animate>
+      <div class="features-grid">
+        <a href="Issues.html" class="feature-card card">
+          <div class="icon-badge pink">⚖️</div>
+          <h4>Women Issues</h4>
+          <p>Legal rights and resources dedicated to protecting your autonomy and well-being.</p>
+        </a>
+        <a href="Help.html" class="feature-card card">
+          <div class="icon-badge purple">📞</div>
+          <h4>Helpline Numbers</h4>
+          <p>Verified emergency contacts for police, medical aid, and crisis centers.</p>
+        </a>
+        <div class="feature-card card">
+          <div class="icon-badge red">❓</div>
+          <h4>Safety Tips</h4>
+          <p>Proactive guidance for navigating urban environments and digital spaces safely.</p>
+        </div>
+        <a href="Report.html" class="feature-card card">
+          <div class="icon-badge pink">📢</div>
+          <h4>Report Issue</h4>
+          <p>Anonymous reporting of harassment or unsafe zones to help other users.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Safe Navigation -->
+    <section class="safe-nav-section container" data-animate>
+      <div class="safe-nav-card card">
+        <div class="safe-nav-map">
+          <div class="map-placeholder">🗺️</div>
+        </div>
+        <div class="safe-nav-content">
+          <span class="section-label">Safe Navigation</span>
+          <h2>Your Personal Guardian in Every Step</h2>
+          <p>SheSafe utilizes AI-driven route analysis to recommend the safest paths based on lighting, community feedback, and emergency service proximity.</p>
+          <ul class="check-list">
+            <li>✅ Live Location Sharing</li>
+            <li>✅ Community Safety Heatmaps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== BOTTOM NAV (mobile) ===== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bnav-item active">
+      <span class="bnav-icon">🏠</span>HOME
+    </a>
+    <a href="Issues.html" class="bnav-item">
+      <span class="bnav-icon">⚖️</span>ISSUES
+    </a>
+    <button class="bnav-sos" onclick="triggerSOS()">
+      <span class="bnav-icon">✳</span>SOS
+    </button>
+    <a href="Help.html" class="bnav-item">
+      <span class="bnav-icon">❓</span>HELP
+    </a>
+    <a href="Report.html" class="bnav-item">
+      <span class="bnav-icon">📢</span>REPORT
+    </a>
+  </nav>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon" id="modal-icon">🚨</div>
+      <h2 id="modal-title">SOS Activated</h2>
+      <p id="modal-msg">Your location is being shared with emergency responders.</p>
+      <button class="modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+>>>>>>> c74225e970115ad72a1a19e3f926cbdd13a88c7d

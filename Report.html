@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheSafe – Report an Issue</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/report.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">SheSafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Issues.html">Issues</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="Report.html" class="active">Report</a></li>
+    </ul>
+    <div class="nav-avatar">👤</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="Issues.html">Issues</a>
+    <a href="Help.html">Help</a>
+    <a href="Report.html" class="active">Report</a>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="page-wrapper report-layout">
+
+    <div class="report-container container">
+
+      <!-- Left: Form -->
+      <div class="report-form-col fade-up">
+        <div class="report-header">
+          <h1>Report Issue</h1>
+          <p>Your safety and voice matter. Provide as much detail as possible to help us assist you.</p>
+        </div>
+
+        <form id="report-form" novalidate>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name-input">Name</label>
+            <input type="text" id="name-input" placeholder="Enter your full name" autocomplete="name" />
+          </div>
+
+          <!-- Anonymous toggle -->
+          <div class="anon-row">
+            <label class="toggle-label">
+              <input type="checkbox" id="anon-toggle" />
+              <span class="toggle-track"></span>
+              Submit anonymously
+            </label>
+            <span class="anon-note">Your identity will not be stored</span>
+          </div>
+
+          <!-- Issue Type -->
+          <div class="form-group">
+            <label for="type-select">Issue Type</label>
+            <div class="select-wrap">
+              <select id="type-select">
+                <option value="">Select an issue type</option>
+                <option>Sexual Harassment</option>
+                <option>Domestic Violence</option>
+                <option>Stalking</option>
+                <option>Cyber Crime</option>
+                <option>Acid Attack</option>
+                <option>Workplace Harassment</option>
+                <option>Other</option>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="desc-input">Description</label>
+            <textarea id="desc-input" placeholder="Tell us what happened — include time, date, and any other details…" rows="5"></textarea>
+            <div class="char-hint">Be as specific as you feel comfortable sharing.</div>
+          </div>
+
+          <!-- Location -->
+          <div class="form-group">
+            <label for="loc-input">Location</label>
+            <div class="loc-wrap">
+              <input type="text" id="loc-input" placeholder="Street, Neighbourhood, or Landmark" />
+              <button type="button" id="loc-btn" class="loc-icon-btn" title="Use my location">📍</button>
+            </div>
+          </div>
+
+          <!-- Map Preview -->
+          <div class="map-preview" id="map-preview">
+            <div class="map-pin-anim">📍</div>
+            <span class="map-label">Tap 📍 to detect your location</span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-btn">
+            <span>➤</span> Submit Report
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Right: Info Panel -->
+      <aside class="report-aside fade-up delay-2">
+        <div class="aside-card card">
+          <div class="aside-icon">🔒</div>
+          <h3>Your Privacy is Sacred</h3>
+          <p>All reports are encrypted end-to-end. You can choose to remain completely anonymous.</p>
+        </div>
+        <div class="aside-card card">
+          <div class="aside-icon">⏱️</div>
+          <h3>Fast Response</h3>
+          <p>Our team reviews all reports within 2 hours. Emergency reports are escalated immediately.</p>
+        </div>
+        <div class="aside-card card">
+          <div class="aside-icon">🤝</div>
+          <h3>Community Impact</h3>
+          <p>Your report helps map unsafe zones and protects other women in your area.</p>
+        </div>
+        <div class="aside-emergency">
+          <p>In immediate danger?</p>
+          <button class="btn btn-pink" onclick="triggerSOS()" style="width:100%;justify-content:center;">
+            🚨 Trigger SOS
+          </button>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ===== BOTTOM NAV (mobile) ===== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bnav-item">
+      <span class="bnav-icon">🏠</span>HOME
+    </a>
+    <a href="Issues.html" class="bnav-item">
+      <span class="bnav-icon">⚖️</span>ISSUES
+    </a>
+    <button class="bnav-sos" onclick="triggerSOS()">
+      <span class="bnav-icon">✳</span>SOS
+    </button>
+    <a href="Help.html" class="bnav-item">
+      <span class="bnav-icon">❓</span>HELP
+    </a>
+    <a href="Report.html" class="bnav-item active">
+      <span class="bnav-icon">📢</span>REPORT
+    </a>
+  </nav>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon" id="modal-icon">✅</div>
+      <h2 id="modal-title">Report Submitted</h2>
+      <p id="modal-msg">Thank you for your report.</p>
+      <button class="modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>
