@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Delivery Exception Dashboard</h1>
+
+  <!-- FILTERS + COUNT -->
+  <div class="card">
+
+    <div class="filters">
+      <select id="filterType">
+        <option value="">All Issues</option>
+        <option>Address Not Found</option>
+        <option>Customer Not Available</option>
+        <option>Payment Issue</option>
+        <option>Package Damaged</option>
+      </select>
+
+      <select id="filterStatus">
+        <option value="">All Status</option>
+        <option>Open</option>
+        <option>Resolved</option>
+      </select>
+    </div>
+
+    <h3>
+      Open: <span id="openCount">0</span> |
+      Resolved: <span id="resolvedCount">0</span>
+    </h3>
+
+  </div>
+
+  <!-- FORM -->
+  <div class="card">
+    <form id="form">
+
+      <input type="text" id="deliveryId" placeholder="Delivery ID" required>
+      <input type="text" id="customerName" placeholder="Customer Name" required>
+
+      <select id="issueType" required>
+        <option value="">Select Issue</option>
+        <option>Address Not Found</option>
+        <option>Customer Not Available</option>
+        <option>Payment Issue</option>
+        <option>Package Damaged</option>
+      </select>
+
+      <!-- UPDATED RADIO -->
+      <div class="priority-group">
+
+        <input type="radio" id="low" name="priority" value="Low" required>
+        <label for="low">Low</label>
+
+        <input type="radio" id="medium" name="priority" value="Medium">
+        <label for="medium">Medium</label>
+
+        <input type="radio" id="high" name="priority" value="High">
+        <label for="high">High</label>
+
+      </div>
+
+      <button type="submit">Add</button>
+
+    </form>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Issue</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
